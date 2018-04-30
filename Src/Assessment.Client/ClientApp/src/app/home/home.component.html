@@ -1,6 +1,8 @@
 <div>
   <h2>Welcome to Board</h2>
 </div>
+<div>
+</div>
 <div class="col-sm-4" *ngFor="let board of boards">
   <div class="card">
     <h3 class="card-header">
@@ -8,8 +10,8 @@
     </h3>
     <div class="card-body">
       <b>Posts</b>
-      <ul>
-
+      <ul  *ngFor="let postit of board.postits">
+        <li><a href="#">{{ postit.title }}</a></li>
       </ul>
     </div>
     <div class="card-footer text-muted">
